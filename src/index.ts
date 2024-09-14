@@ -49,3 +49,38 @@ let employee:{ readonly name:string,age:number}={
   name:"John",
   age:30
 }
+
+
+//union types
+
+
+function kgToLbs(weight:number | string):number{
+  //narrowing
+  if(typeof weight==="number")
+  {
+    return weight*2.2;
+  }
+  else
+  {
+    return parseInt(weight)*2.2;
+  }
+}
+//intersection types
+type Draggable={
+  drag:()=>void;      
+}
+type Resizable={
+  resize:()=>void;
+}
+type UIWidget=Draggable&Resizable;
+let textBox:UIWidget={
+  drag:()=>{},
+  resize:()=>{}
+} 
+
+
+//litrell types
+type Quantity=50|100;
+
+
+let quantity:Quantity=100;

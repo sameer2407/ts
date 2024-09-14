@@ -1,7 +1,5 @@
 "use strict";
-let age = 30;
-if (age < 50) {
-    age += 10;
-    console.log(age);
-}
+let arr = [];
+arr[0] = 45;
+console.log(typeof (arr));
 //# sourceMappingURL=index.js.map
